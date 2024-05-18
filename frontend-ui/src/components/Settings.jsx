@@ -25,7 +25,7 @@ const Settings = () => {
         <RemainingFilament />
       </div>
 
-      <div>
+      <div className="mt-[8px]">
         <Refill />
       </div>
     </div>
