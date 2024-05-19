@@ -1,7 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
+import { FilamentContext } from "../../context/FilamentContext";
+import { useContext } from "react";
 
 const TextBox = () => {
-  const [input, setInput] = useState(0 + "g");
+  const { filament, setFilament } = useContext(FilamentContext);
 
   const changeValue = (e) => {
     let val = e.target.value;
@@ -23,16 +25,19 @@ const TextBox = () => {
     }
 
     const cleanedValue = val.replace(/g|[^0-9]/g, "");
-    setInput(cleanedValue + "g");
+    setFilament({
+      filamentRemaining: cleanedValue + "g",
+      filamentTotal: filament.filamentTotal,
+    });
   };
 
   return (
     <div>
       <input
         type="text"
-        value={input}
+        value={filament.filamentRemaining}
         onChange={changeValue}
-        className="w-[100px] h-[55px] text-center border-2 border-[#e2e8f0] rounded-md font-poppinsRegular text-[20px] focus:border-[#83bafa] outline-none"
+        className="w-[100px] h-[55px] text-center border-2 border-[#e2e8f0] rounded-md font-poppinsRegular text-[20px] focus:border-[#83bafa] focus:outline-none"
       />
     </div>
   );
