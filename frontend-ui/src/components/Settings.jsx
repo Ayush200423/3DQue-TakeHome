@@ -18,10 +18,13 @@ const Settings = () => {
   }, [filament, originalFilament]);
 
   // For use in the pie chart
-  const filamentTotalProcessed = filament.filamentTotal.slice(0, -1);
+  const filamentTotalProcessed = originalFilament.filamentTotal.slice(0, -1);
   const filamentTotalInteger = parseInt(filamentTotalProcessed, 10);
 
-  const filamentRemainingProcessed = filament.filamentRemaining.slice(0, -1);
+  const filamentRemainingProcessed = originalFilament.filamentRemaining.slice(
+    0,
+    -1
+  );
   const filamentRemainingInteger = parseInt(filamentRemainingProcessed, 10);
 
   return (

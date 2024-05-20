@@ -1,6 +1,6 @@
 ## 3DQUE Take Home Assignment
 
-Demo Video: https://youtu.be/4Tr_n3pbwY0
+Demo Video: https://youtu.be/aRKPL2VrJxw
 
 ## How to set up
 
@@ -10,5 +10,11 @@ Demo Video: https://youtu.be/4Tr_n3pbwY0
 4. Change Directory into the "backend" folder, build the jar file, and run it.
 
 At this point, the frontend will be operating on port 3000, and the backend will be running on port 8080.
+
+Core technologies used:
+
+- React (JS)
+- TailwindCSS
+- Spring Boot (Java)
 
 Please feel free to reach out to me in case you have any questions!
