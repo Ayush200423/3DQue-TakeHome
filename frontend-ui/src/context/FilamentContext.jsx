@@ -3,7 +3,7 @@ import { createContext, useState } from "react";
 export const FilamentContext = createContext({});
 
 export const FilamentContextProvider = ({ children }) => {
-  // These are temporary values, will be changed later
+  // Note; originalFilament means the values saved in the H2 Database.
   const [filament, setFilament] = useState({
     filamentRemaining: "100g",
     filamentTotal: "1000g",
