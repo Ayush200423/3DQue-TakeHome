@@ -21,6 +21,7 @@ public class FilamentController {
         this.filamentService = filamentService;
     }
 
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
     @GetMapping("/getFilamentById/{id}")
     public ResponseEntity<Filament> getFilament(@PathVariable Integer id) {
         Optional<Filament> filament = filamentService.getFilament(id);
@@ -32,6 +33,7 @@ public class FilamentController {
         }
     }
 
+    @CrossOrigin(origins = "http://localhost:3000", allowCredentials = "true")
     @PutMapping("/updateFilament/{id}")
     public ResponseEntity<Filament> updateFilament(@PathVariable Integer id, @RequestBody Filament filament) {
         Filament savedFilament = filamentService.updateFilamentRemaining(id, filament);
